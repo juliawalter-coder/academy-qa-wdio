@@ -20,10 +20,10 @@ cada rama que crees tendrá el siguiente formato: nombre-apellidos-título-de-la
 
 **📌 Objetivo:** Aprender a realizar un click y validar que este hace una acción.
 
-Dado el siguiente path: /challenging_dom
+Dado el siguiente path: /add_remove_elements
 
-1. **Acción:** Hacer click en el botón `baz`.
-2. **Resultado:** Verificar que el código de Asnwer cambia.
+1. **Acción:** Hacer click en el botón `add element`.
+2. **Resultado:** Verificar que aparece un botón con el texto `Delete`
 
 ## 🟡 Nivel 2 – Fill input
 
