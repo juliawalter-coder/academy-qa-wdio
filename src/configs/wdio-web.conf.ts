@@ -14,6 +14,15 @@ export const config = {
       'goog:chromeOptions': {
         args: ['--disable-gpu', '--no-sandbox'],
       },
+      //browserName: 'firefox',
+      //'moz:firefoxOptions': {
+      //args: ['-headless'],
+      //},
+      //browserName: 'msedge',
+      //'ms:edgeOptions': {
+      //args: ['--headless'],
+      //},
+      //browserName: 'safari technology preview',
     },
   ],
   logLevel: 'info',
@@ -33,5 +42,5 @@ export const config = {
   // Hooks
   beforeTest: async function (test, context) {
     await browser.maximizeWindow();
-  }
+  },
 };
