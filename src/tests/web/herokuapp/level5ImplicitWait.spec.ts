@@ -8,14 +8,9 @@ describe('Level 1 - Button click scenario', () => {
   })
 
   it('ACT004 - Implicit wait ', async () => {
-    //await browser.url('entry_ad');
-    const modalWindow = await $('#modal');
-    const CloseModalWindow = await $('div[class="modal-footer"]');
 
-    await modalWindow.waitForDisplayed();
-    await CloseModalWindow.waitForClickable();
-    await CloseModalWindow.click();
+    await EntryAdPage.WaitModalWindowToBeDisplayedAndClose();
+    expect(EntryAdPage.modalWindow).not.toBeDisplayed();
 
-    expect(modalWindow).not.toBeDisplayed();
   })
 })
