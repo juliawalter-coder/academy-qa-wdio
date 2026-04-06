@@ -1,4 +1,5 @@
 import { sharedConfig } from './wdio-shared.conf';
+import * as async_hooks from 'node:async_hooks';
 
 export const config = {
   ...sharedConfig,
@@ -30,4 +31,7 @@ export const config = {
     timeout: 60000,
   },
   // Hooks
+  beforeTest: async function (test, context) {
+    await browser.maximizeWindow();
+  }
 };

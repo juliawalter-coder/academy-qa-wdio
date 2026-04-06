@@ -6,11 +6,11 @@ class CheckBoxesPage extends WebBasePage {
   }
 
   get checkBoxValue1() {
-    return $('#checkboxes > input[type=checkbox]:nth-child(1)');
+    return $('input[type=checkbox]:nth-child(1)');
   }
 
   get checkBoxValue2() {
-    return $('#checkboxes > input[type=checkbox]:nth-child(3)');
+    return $('input[type=checkbox]:nth-child(3)');
   }
 
   async checkBoxValue1Click() {
