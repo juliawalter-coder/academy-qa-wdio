@@ -9,15 +9,10 @@ describe('Level 1 - Button click scenario', () => {
 
   it('ACT002 - Retrieve password - Internal server error window', async () => {
     //await browser.url('forgot_password');
-    const emailInput = await $('#email');
-    const retrievePasswordButton = await $('#form_submit');
 
-    await emailInput.setValue('teste@test.com');
-    await retrievePasswordButton.click();
-
-    const InternalServerErrorWindow = $('body > h1');
+    await ForgotPasswordPage.submitResetPasswordForm('teste@test.com');
     //Internal server error window
-    await expect(InternalServerErrorWindow).toHaveText('Internal Server Error')
+    await expect(ForgotPasswordPage.InternalServerErrorWindow).toHaveText('Internal Server Error');
     // expect(isDisplayedDeleteElement).to.equal(true);
     //await expect(deleteElement).toHaveText('Delete');
     //Access page
