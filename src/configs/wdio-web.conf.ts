@@ -3,7 +3,10 @@ import { sharedConfig } from './wdio-shared.conf';
 export const config = {
   ...sharedConfig,
 
-  specs: ['../tests/web/*.spec.ts'],
+  // Change location spec files
+  specs: ['../tests/web/herokuapp/*.spec.ts'],
+  // Run the code in parallel
+  maxInstances: 10,
   capabilities: [
     {
       browserName: 'chrome',
@@ -20,8 +23,11 @@ export const config = {
   connectionRetryCount: 3,
   services: ['visual'],
   framework: 'mocha',
+  // Test reporter
+  reporters: ['spec'],
   mochaOpts: {
     ui: 'bdd',
     timeout: 60000,
   },
+  // Hooks
 };
