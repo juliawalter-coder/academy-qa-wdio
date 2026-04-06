@@ -10,39 +10,14 @@ describe('Level 1 - Button click scenario', () => {
   it('ACT003 - Dropdown selection validation', async () => {
 
     await DropDownPage.dropDownFieldClick();
-    const count = await DropDownPage.dropDownField.values.length;
 
-    function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1) + min);
-    }
+    const count = await DropDownPage.dropDownFieldOptions.length;
 
-    let number = getRandomInt(1, 2);
+    let number = DropDownPage.getRandomInt(1, count).toString();
 
-    await DropDownPage.dropDownField.selectByAttribute('value', number.toString());
-    await expect(DropDownPage.dropDownField).toHaveValue(number.toString());
-    await console.log(number);
-    await console.log(count);
+    await DropDownPage.selectDropDownOptionByAttribute('value', number);
 
-    //await dropDownField.click();
-    //await dropDownField.selectByAttribute('value', '2');
-    //await expect(dropDownField).toHaveValue('2');
+    await expect(DropDownPage.dropDownField).toHaveValue(number);
 
-    //Select by attribute / by index or by visible texts
-    // Math.random()
-
-    //await dropDownFieldOption.click();
-
-    //Internal server error window
-    //await expect().toHaveText('Internal Server Error')
-    // expect(isDisplayedDeleteElement).to.equal(true);
-    //await expect(deleteElement).toHaveText('Delete');
-    //Access page
-    //Identify the button - click on button
-    //Identify the delete button on the screen
-
-    //await fistnama.setValue();
-    //await browser.pause();
   })
 })
