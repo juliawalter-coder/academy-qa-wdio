@@ -8,13 +8,28 @@ describe('Level 1 - Button click scenario', () => {
   })
 
   it('ACT003 - Dropdown selection validation', async () => {
-
     const dropDownField = await $('#dropdown');
-    //const dropDownFieldOption = await $('#dropdown["@value=1"]');
-
-
-    //await emailInput.setValue('teste@test.com');
     await dropDownField.click();
+
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    let number = getRandomInt(1, 2);
+
+    await dropDownField.selectByAttribute('value', number.toString());
+    await expect(dropDownField).toHaveValue(number.toString());
+    await console.log(number);
+
+    //await dropDownField.click();
+    //await dropDownField.selectByAttribute('value', '2');
+    //await expect(dropDownField).toHaveValue('2');
+
+    //Select by attribute / by index or by visible texts
+    // Math.random()
+
     //await dropDownFieldOption.click();
 
     //Internal server error window
