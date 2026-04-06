@@ -8,9 +8,7 @@ describe('Level 1 - Button click scenario', () => {
   })
 
   it('ACT004 - Implicit wait ', async () => {
-
     await EntryAdPage.WaitModalWindowToBeDisplayedAndClose();
     expect(EntryAdPage.modalWindow).not.toBeDisplayed();
-
   })
 })

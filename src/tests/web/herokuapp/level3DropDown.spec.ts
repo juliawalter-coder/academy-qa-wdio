@@ -8,7 +8,7 @@ describe('Level 1 - Button click scenario', () => {
   })
 
   it('ACT003 - Dropdown selection validation', async () => {
-    //await browser.url('dropdown');
+
     const dropDownField = await $('#dropdown');
     //const dropDownFieldOption = await $('#dropdown["@value=1"]');
 
