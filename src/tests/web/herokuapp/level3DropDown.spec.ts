@@ -7,14 +7,15 @@ describe('Level 1 - Button click scenario', () => {
     await DropDownPage.navigate();
   })
 
-  it('ACT003 - Dropdown selection vaidation', async () => {
+  it('ACT003 - Dropdown selection validation', async () => {
     //await browser.url('dropdown');
     const dropDownField = await $('#dropdown');
+    //const dropDownFieldOption = await $('#dropdown["@value=1"]');
 
 
     //await emailInput.setValue('teste@test.com');
     await dropDownField.click();
-    //await browser.ocrClickOnText({ text: 'Option 1' });
+    //await dropDownFieldOption.click();
 
     //Internal server error window
     //await expect().toHaveText('Internal Server Error')
