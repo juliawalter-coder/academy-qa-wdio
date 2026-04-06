@@ -8,8 +8,9 @@ describe('Level 1 - Button click scenario', () => {
   })
 
   it('ACT003 - Dropdown selection validation', async () => {
-    const dropDownField = await $('#dropdown');
-    await dropDownField.click();
+
+    await DropDownPage.dropDownFieldClick();
+    const count = await DropDownPage.dropDownField.values.length;
 
     function getRandomInt(min, max) {
       min = Math.ceil(min);
@@ -19,9 +20,10 @@ describe('Level 1 - Button click scenario', () => {
 
     let number = getRandomInt(1, 2);
 
-    await dropDownField.selectByAttribute('value', number.toString());
-    await expect(dropDownField).toHaveValue(number.toString());
+    await DropDownPage.dropDownField.selectByAttribute('value', number.toString());
+    await expect(DropDownPage.dropDownField).toHaveValue(number.toString());
     await console.log(number);
+    await console.log(count);
 
     //await dropDownField.click();
     //await dropDownField.selectByAttribute('value', '2');
