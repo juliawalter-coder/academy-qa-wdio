@@ -1,6 +1,6 @@
 import CheckBoxesPage from '../../../pages/web/herokuapp/CheckBoxesPage';
 
-describe('Level 1 - Button click scenario', () => {
+describe('Level 4 - Checkboxes', () => {
 
   it('ACT004 -CheckBox selection ', async () => {
     await CheckBoxesPage.navigate();

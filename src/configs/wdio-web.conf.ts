@@ -9,8 +9,7 @@ export const config = {
   // Run the code in parallel
   maxInstances: 10,
   capabilities: [
-    {
-      browserName: 'chrome',
+    { browserName: 'chrome',
       'goog:chromeOptions': {
         args: ['--disable-gpu', '--no-sandbox'],
       },

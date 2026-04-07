@@ -1,6 +1,6 @@
 import DropDownPage from '../../../pages/web/herokuapp/DropDownPage';
 
-describe('Level 1 - Button click scenario', () => {
+describe('Level 3 - Open dropdown', () => {
 
   it('ACT003 - Dropdown selection validation', async () => {
     await DropDownPage.navigate();
